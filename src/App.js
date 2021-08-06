@@ -1,25 +1,77 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import {
+  BrowserRouter, Switch, Route, Link,
+} from 'react-router-dom';
+import Cart from './components/Cart';
+import Homepage from './components/Homepage';
+import Shop from './components/Shop';
 
-function App() {
+const App = () => {
+  const cart = [
+    {
+      name: 'Placeholder',
+      price: 2.99,
+      quantity: 1,
+      key: '1',
+    },
+  ];
+  const [itemsInCart, setCart] = useState(cart);
+
+  function changeQuantity(e) {
+    const array = [...itemsInCart];
+    const index = array
+      .map((item) => item.key)
+      .indexOf(e.target.parentNode.getAttribute('data-key'));
+    if (index !== -1) {
+      if (e.target.textContent === '+') {
+        array[index].quantity += 1;
+      } else if (array[index].quantity <= 1) {
+        array.splice(index, 1);
+      } else {
+        array[index].quantity -= 1;
+      }
+    }
+    setCart(array);
+  }
+
+  function addToCart(newItem) {
+    if (itemsInCart.some((itemInCart) => itemInCart.key === newItem.key)) {
+      return;
+    }
+    const itemToAdd = { ...newItem, quantity: '1' };
+    setCart((prevCart) => [...prevCart, itemToAdd]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/cart">Cart</Link>
+            </li>
+            <li>
+              <Link to="/shop">Shop</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+        <Route exact path="/cart">
+          <Cart itemsInCart={itemsInCart} changeQuantity={changeQuantity} />
+        </Route>
+        <Route exact path="/shop">
+          <Shop addToCart={addToCart} />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
