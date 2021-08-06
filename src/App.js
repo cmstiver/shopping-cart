@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter, Switch, Route, Link,
 } from 'react-router-dom';
@@ -7,15 +7,7 @@ import Homepage from './components/Homepage';
 import Shop from './components/Shop';
 
 const App = () => {
-  const cart = [
-    {
-      name: 'Placeholder',
-      price: 2.99,
-      quantity: 1,
-      key: '1',
-    },
-  ];
-  const [itemsInCart, setCart] = useState(cart);
+  const [itemsInCart, setCart] = useState([]);
 
   function changeQuantity(e) {
     const array = [...itemsInCart];

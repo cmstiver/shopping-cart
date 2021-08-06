@@ -1,19 +1,30 @@
 import React from 'react';
 
+function importAll(r) {
+  const images = {};
+  r.keys().forEach((item, index) => {
+    images[item.replace('./', '')] = r(item);
+  });
+  return images;
+}
+const images = importAll(require.context('../imgs/items', false, /\.(png|jpe?g|svg)$/));
+
+console.log(images['25-100 Piece Stationery Grab Bag.jpg'].default);
+
 function Shop(props) {
   const itemsInShop = [
     {
-      name: 'Item #1',
+      name: '25-100 Piece Stationery Grab Bag',
       price: 2.99,
       key: '1',
     },
     {
-      name: 'Item #2',
+      name: 'A Letter from the Stars',
       price: 199.99,
       key: '2',
     },
     {
-      name: 'Item #3',
+      name: 'Sticker Grab Bag',
       price: 10000,
       key: '3',
     },
@@ -34,6 +45,7 @@ function Shop(props) {
       {itemsInShop.map((item) => (
         <div key={item.key} data-key={item.key}>
           <div>{item.name}</div>
+          <img src={images[`${item.name}.jpg`].default} alt={item.name} />
           <div>{item.price}</div>
           <button type="button" onClick={sendToCart}>
             Add to Cart
