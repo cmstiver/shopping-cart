@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.bc85171e.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.52d2dd10.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.52d2dd10.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.e2f9aa8b.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.e2f9aa8b.js.map",
+    "static/js/2.fbb04886.chunk.js": "/shopping-cart/static/js/2.fbb04886.chunk.js",
+    "static/js/2.fbb04886.chunk.js.map": "/shopping-cart/static/js/2.fbb04886.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.bc85171e.chunk.css.map": "/shopping-cart/static/css/main.bc85171e.chunk.css.map",
+    "static/js/2.fbb04886.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.fbb04886.chunk.js.LICENSE.txt",
+    "static/media/25-100 Piece Stationery Grab Bag.jpg": "/shopping-cart/static/media/25-100 Piece Stationery Grab Bag.2524a2d8.jpg",
+    "static/media/A Letter from the Stars.jpg": "/shopping-cart/static/media/A Letter from the Stars.ebbd67a6.jpg",
+    "static/media/Sticker Grab Bag.jpg": "/shopping-cart/static/media/Sticker Grab Bag.40126a03.jpg",
+    "static/media/banner.b2f6783a.jpg": "/shopping-cart/static/media/banner.b2f6783a.jpg",
+    "static/media/envelopes.b9628455.jpg": "/shopping-cart/static/media/envelopes.b9628455.jpg",
+    "static/media/inHand.56db9eef.jpg": "/shopping-cart/static/media/inHand.56db9eef.jpg",
+    "static/media/singleEnvelope.b9788385.jpg": "/shopping-cart/static/media/singleEnvelope.b9788385.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2f9aa8b.js",
+    "static/js/2.fbb04886.chunk.js",
+    "static/css/main.bc85171e.chunk.css",
+    "static/js/main.52d2dd10.chunk.js"
+  ]
+}
