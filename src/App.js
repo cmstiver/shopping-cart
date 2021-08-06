@@ -48,7 +48,7 @@ const App = () => {
             <Link to="/shop">Shop</Link>
           </div>
           <div className="link">
-            <Link to="/cart">
+            <Link to="/your-cart">
               Cart (
               {itemsInCart.length}
               )
@@ -64,7 +64,7 @@ const App = () => {
           <Route exact path="/shop">
             <Shop addToCart={addToCart} />
           </Route>
-          <Route exact path="/cart">
+          <Route exact path="/your-cart">
             <Cart itemsInCart={itemsInCart} changeQuantity={changeQuantity} />
           </Route>
         </Switch>
