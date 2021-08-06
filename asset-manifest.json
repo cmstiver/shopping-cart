@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.bc85171e.chunk.css",
-    "main.js": "/shopping-cart/static/js/main.901fa1a7.chunk.js",
-    "main.js.map": "/shopping-cart/static/js/main.901fa1a7.chunk.js.map",
+    "main.css": "/shopping-cart/static/css/main.e03eaf7a.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.9a902f46.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.9a902f46.chunk.js.map",
     "runtime-main.js": "/shopping-cart/static/js/runtime-main.e2f9aa8b.js",
     "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.e2f9aa8b.js.map",
     "static/js/2.fbb04886.chunk.js": "/shopping-cart/static/js/2.fbb04886.chunk.js",
     "static/js/2.fbb04886.chunk.js.map": "/shopping-cart/static/js/2.fbb04886.chunk.js.map",
     "index.html": "/shopping-cart/index.html",
-    "static/css/main.bc85171e.chunk.css.map": "/shopping-cart/static/css/main.bc85171e.chunk.css.map",
+    "static/css/main.e03eaf7a.chunk.css.map": "/shopping-cart/static/css/main.e03eaf7a.chunk.css.map",
     "static/js/2.fbb04886.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.fbb04886.chunk.js.LICENSE.txt",
     "static/media/25-100 Piece Stationery Grab Bag.jpg": "/shopping-cart/static/media/25-100 Piece Stationery Grab Bag.2524a2d8.jpg",
     "static/media/A Letter from the Stars.jpg": "/shopping-cart/static/media/A Letter from the Stars.ebbd67a6.jpg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.e2f9aa8b.js",
     "static/js/2.fbb04886.chunk.js",
-    "static/css/main.bc85171e.chunk.css",
-    "static/js/main.901fa1a7.chunk.js"
+    "static/css/main.e03eaf7a.chunk.css",
+    "static/js/main.9a902f46.chunk.js"
   ]
 }
