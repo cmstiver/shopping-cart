@@ -37,18 +37,18 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/shopping-cart">
       <div id="top">
         <img src={banner} alt="banner" />
         <nav id="topnav">
           <div className="link">
-            <Link to="/shopping-cart/">Home</Link>
+            <Link to="/">Home</Link>
           </div>
           <div className="link">
-            <Link to="/shopping-cart/shop">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </div>
           <div className="link">
-            <Link to="/shopping-cart/cart">
+            <Link to="/cart">
               Cart (
               {itemsInCart.length}
               )
@@ -58,13 +58,13 @@ const App = () => {
       </div>
       <div id="main">
         <Switch>
-          <Route exact path="/shopping-cart/">
+          <Route exact path="/">
             <Homepage />
           </Route>
-          <Route exact path="/shopping-cart/shop">
+          <Route exact path="/shop">
             <Shop addToCart={addToCart} />
           </Route>
-          <Route exact path="/shopping-cart/cart">
+          <Route exact path="/cart">
             <Cart itemsInCart={itemsInCart} changeQuantity={changeQuantity} />
           </Route>
         </Switch>
