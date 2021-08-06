@@ -42,13 +42,13 @@ const App = () => {
         <img src={banner} alt="banner" />
         <nav id="topnav">
           <div className="link">
-            <Link to="/">Home</Link>
+            <Link to="/shopping-cart/">Home</Link>
           </div>
           <div className="link">
-            <Link to="/shop">Shop</Link>
+            <Link to="/shopping-cart/shop">Shop</Link>
           </div>
           <div className="link">
-            <Link to="/cart">
+            <Link to="/shopping-cart/cart">
               Cart (
               {itemsInCart.length}
               )
