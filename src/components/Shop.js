@@ -41,18 +41,18 @@ function Shop(props) {
   }
 
   return (
-    <div>
+    <>
       {itemsInShop.map((item) => (
-        <div key={item.key} data-key={item.key}>
+        <div className="card" key={item.key} data-key={item.key}>
           <div>{item.name}</div>
-          <img src={images[`${item.name}.jpg`].default} alt={item.name} />
-          <div>{item.price}</div>
-          <button type="button" onClick={sendToCart}>
+          <img className="itemimg" src={images[`${item.name}.jpg`].default} alt={item.name} />
+          <div>{`$${item.price}`}</div>
+          <button id="add-to-cart" type="button" onClick={sendToCart}>
             Add to Cart
           </button>
         </div>
       ))}
-    </div>
+    </>
   );
 }
 

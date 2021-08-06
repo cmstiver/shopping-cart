@@ -5,6 +5,8 @@ import {
 import Cart from './components/Cart';
 import Homepage from './components/Homepage';
 import Shop from './components/Shop';
+import banner from './imgs/banner.jpg';
+import './style/style.scss';
 
 const App = () => {
   const [itemsInCart, setCart] = useState([]);
@@ -13,7 +15,7 @@ const App = () => {
     const array = [...itemsInCart];
     const index = array
       .map((item) => item.key)
-      .indexOf(e.target.parentNode.getAttribute('data-key'));
+      .indexOf(e.target.parentNode.parentNode.getAttribute('data-key'));
     if (index !== -1) {
       if (e.target.textContent === '+') {
         array[index].quantity += 1;
@@ -30,38 +32,43 @@ const App = () => {
     if (itemsInCart.some((itemInCart) => itemInCart.key === newItem.key)) {
       return;
     }
-    const itemToAdd = { ...newItem, quantity: '1' };
+    const itemToAdd = { ...newItem, quantity: 1 };
     setCart((prevCart) => [...prevCart, itemToAdd]);
   }
 
   return (
     <BrowserRouter>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/cart">Cart</Link>
-            </li>
-            <li>
-              <Link to="/shop">Shop</Link>
-            </li>
-          </ul>
+      <div id="top">
+        <img src={banner} alt="banner" />
+        <nav id="topnav">
+          <div className="link">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="link">
+            <Link to="/shop">Shop</Link>
+          </div>
+          <div className="link">
+            <Link to="/cart">
+              Cart (
+              {itemsInCart.length}
+              )
+            </Link>
+          </div>
         </nav>
       </div>
-      <Switch>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route exact path="/cart">
-          <Cart itemsInCart={itemsInCart} changeQuantity={changeQuantity} />
-        </Route>
-        <Route exact path="/shop">
-          <Shop addToCart={addToCart} />
-        </Route>
-      </Switch>
+      <div id="main">
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route exact path="/shop">
+            <Shop addToCart={addToCart} />
+          </Route>
+          <Route exact path="/cart">
+            <Cart itemsInCart={itemsInCart} changeQuantity={changeQuantity} />
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 };
