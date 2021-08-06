@@ -58,13 +58,13 @@ const App = () => {
       </div>
       <div id="main">
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/shopping-cart/">
             <Homepage />
           </Route>
-          <Route exact path="/shop">
+          <Route exact path="/shopping-cart/shop">
             <Shop addToCart={addToCart} />
           </Route>
-          <Route exact path="/cart">
+          <Route exact path="/shopping-cart/cart">
             <Cart itemsInCart={itemsInCart} changeQuantity={changeQuantity} />
           </Route>
         </Switch>
